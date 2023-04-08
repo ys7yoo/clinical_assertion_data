@@ -22,7 +22,7 @@ def index_of_punctuation(str, backwards=False):
 
 def create_sentences_from_labels(label_path, mimic_notes_path, save_path="assertion_samples.csv"):
     labels_df = pd.read_csv(label_path)
-    notes_df = pd.read_csv(mimic_notes_path)
+    notes_df = pd.read_csv(mimic_notes_path, low_memory=False)
 
     sentences = []
     labels = []
